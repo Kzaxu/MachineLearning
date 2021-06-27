@@ -30,8 +30,7 @@ def multi_thread():
 def multi_proc():
     with ProcessPoolExecutor() as pool:
         result = pool.map(is_prime, PRIMES) 
-    for r in result:
-        print(r)
+    return result
 
 if __name__ == "__main__":
     bg = time.time()
